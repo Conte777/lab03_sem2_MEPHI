@@ -215,6 +215,7 @@ int choice(table* t, int a) {
 		printf("You didn't enter a number in the possible range \n");
 		return OK;
 	}
+	return CZ;
 }
 
 int scanfs(int* a, int b) {
@@ -260,7 +261,7 @@ int main() {
 	if (flag)
 		create_table(&t, msize1, msize2);
 	while (flag) {
-		printf("\nEnter the number of the item to be executed\n0. Exit\n1. Inclusion of a new element in the table \n2. Search in the table for the element specified by the composite key \n3. Deleting an element specified by the composite key \n4. Search in the element table by any given key \n5. Deleting from the table an element specified by a key in one of the key spaces \n6. Displaying the contents of the table on the screen\n7. Deleting elements specified by a range of keys from the table without reorganizing the table \n8. Reorganization of the first key space\n9. Displaying the table on the screen through the second key space\nEnter the number: ");
+		printf("\nEnter the number of the item to be executed\n0. Exit\n1. Add item to the table\n2. Scan in the table by the composite key \n3. Deleting an element in the table by the composite key \n4. Search in the element in the table by any given key \n5. Deleting from the table an element specified by any given key\n6. Print table by KS1\n7. Deleting item by the range of given key without reorganizing the table \n8. Reorganization of the first key space\n9. Print table by KS2\nEnter the number: ");
 		b = scanf("%d", &a);
 		//system("cls");
 		if (b > 0 && a > 0 && a < 10) {
